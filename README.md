@@ -78,3 +78,5 @@ This new assignment consists of two technical products. You will submit the foll
   - Visually estimate the result by plotting the daily minimum temperature.
     
 6. Export the DataFrame to a CSV file.
+
+© 2022 edX Boot Camps LLC
