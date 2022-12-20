@@ -98,6 +98,8 @@ This new assignment consists of two technical products. You will submit the foll
 
 <img width="1212" alt="Screenshot 2022-12-19 at 2 27 40 PM" src="https://user-images.githubusercontent.com/112406455/208521633-c3c117a3-da65-4007-8607-57b95e913324.png">
 
+  - On average, the third month has the coldest minimum temperature on Mars, and the eighth month is the warmest. But it is always very cold there in human terms!
+
 * Which months have the lowest and the highest atmospheric pressure on Mars? To answer this question:
   
   - Find the average the daily atmospheric pressure of all the months.
@@ -108,6 +110,8 @@ This new assignment consists of two technical products. You will submit the foll
 
 <img width="1213" alt="Screenshot 2022-12-19 at 2 27 58 PM" src="https://user-images.githubusercontent.com/112406455/208522492-75eba640-31d2-4b25-933c-7972a1616c7b.png">
 
+  - Atmospheric pressure is, on average, lowest in the sixth month and highest in the ninth.
+
 * About how many terrestrial (Earth) days exist in a Martian year? To answer this question:
   
   - Consider how many days elapse on Earth in the time that Mars circles the Sun once.
@@ -115,6 +119,8 @@ This new assignment consists of two technical products. You will submit the foll
   - Visually estimate the result by plotting the daily minimum temperature.
 
 <img width="1212" alt="Screenshot 2022-12-19 at 2 28 07 PM" src="https://user-images.githubusercontent.com/112406455/208522699-4f3c95ec-155c-4e45-9184-8253a0100be0.png">
+
+  - The distance from peak to peak is roughly 1425-750, or 675 days. A year on Mars appears to be about 675 days from the plot. Internet search confirms that a Mars year is equivalent to 687 earth days.
 
 6. Export the DataFrame to a CSV file.
 
