@@ -120,7 +120,17 @@ This new assignment consists of two technical products. You will submit the foll
 
 <img width="1212" alt="Screenshot 2022-12-19 at 3 00 46 PM" src="https://user-images.githubusercontent.com/112406455/208523224-b9b0d805-a2ff-4703-8a69-e4d894b3d1b5.png">
 
-Code Execution Instructions:
+### Code Execution Instructions:
+* Download the repository onto you computer.
+* Open the [part_1_mars_news.ipynb](https://github.com/tallantj95/web-scraping-challenge/blob/main/part_1_mars_news.ipynb) file in a Jupyter Notebook.
+* Select the "Kernel" tab and click "Restart Kernel and Clear all Outputs".
+* Then proceed to hit shift + enter to cycle through the script cell by cell.
+* After you cycle through the "part_1_mars_news.ipynb" file, you will find a [mars_news.json](https://github.com/tallantj95/web-scraping-challenge/blob/main/output/mars_news.json) file in the [output](https://github.com/tallantj95/web-scraping-challenge/tree/main/output) folder.
+* Then open the [part_2_mars_weather.ipynb](https://github.com/tallantj95/web-scraping-challenge/blob/main/part_2_mars_weather.ipynb) file.
+* Select the "Kernel" tab and click "Restart Kernel and Clear all Outputs".
+* Then proceed to hit shift + enter to cycle through the script cell by cell.
+* Once finished a [mars_weather.csv](https://github.com/tallantj95/web-scraping-challenge/blob/main/output/mars_weather) file will be located in the [output](https://github.com/tallantj95/web-scraping-challenge/tree/main/output) folder
+* The code is accompanied by an outline to walk you through the process step by step.
 
 
 © 2022 edX Boot Camps LLC
