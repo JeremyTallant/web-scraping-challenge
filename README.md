@@ -136,7 +136,4 @@ This new assignment consists of two technical products. You will submit the foll
 * Select the "Kernel" tab and click "Restart Kernel and Clear all Outputs".
 * Then proceed to hit shift + enter to cycle through the script cell by cell.
 * Once finished a [mars_weather.csv](https://github.com/tallantj95/web-scraping-challenge/blob/main/output/mars_weather) file will be located in the [output](https://github.com/tallantj95/web-scraping-challenge/tree/main/output) folder
-* The code is accompanied by an outline to walk you through the process step by step.
-
-
-© 2022 edX Boot Camps LLC
+* The code is accompanied by an outline to walk you through the process step by 
