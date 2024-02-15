@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission to Mars</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Jumbotron Header -->
+        <div class="jumbotron mt-4">
+            <h1 class="display-4">Mission to Mars</h1>
+            <p class="lead">Latest information from Mars exploration missions.</p>
+            <!-- Scrape New Data Button -->
+            <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
+        </div>
+
+        <!-- Display Mars News -->
+        <div class="my-4">
+            <h2>Mars News</h2>
+            {% if mars.news %}
+                {% for news_item in mars.news %}
+                    <div class="news-item">
+                        <h3>{{ news_item.title }}</h3>
+                        <p>{{ news_item.details }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No news available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Display Featured Mars Image -->
+        <div class="my-4">
+            <h2>Featured Mars Image</h2>
+            {% if mars.featured_image %}
+                <img src="{{ mars.featured_image }}" class="img-fluid" alt="Featured Mars Image">
+            {% else %}
+                <p>No featured image available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Display Mars Facts -->
+        <div class="my-4">
+            <h2>Mars Facts</h2>
+            {% if mars.mars_facts %}
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Earth</th>
+                            <th>Mars</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for fact in mars.mars_facts %}
+                            <tr>
+                                <td>{{ fact.Metric }}</td>
+                                <td>{{ fact.Earth }}</td>
+                                <td>{{ fact.Mars }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No facts available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Display Mars Hemisphere Images -->
+        <div class="my-4">
+            <h2>Mars Hemisphere Images</h2>
+            <div class="row">
+                {% if mars.hemisphere_images %}
+                    {% for image_url in mars.hemisphere_images %}
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <img src="{{ image_url }}" class="img-fluid" alt="Mars Hemisphere Image">
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No hemisphere images available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
