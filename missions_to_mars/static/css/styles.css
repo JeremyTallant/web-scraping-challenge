@@ -1,0 +1,11 @@
+.jumbotron {
+    background-color: #d96c23; /* Or any other shade of red or orange that resembles the color of Mars */
+    color: white;
+    text-align: center; /* Center text within the jumbotron */
+}
+
+.jumbotron h1 {
+    font-size: 3rem; /* Responsive font size */
+}
+
+

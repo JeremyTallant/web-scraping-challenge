@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 
 <body>
@@ -19,18 +21,19 @@
         </div>
 
         <!-- Display Mars News -->
-        <div class="my-4">
-            <h2>Mars News</h2>
-            {% if mars.news %}
-                {% for news_item in mars.news %}
-                    <div class="news-item">
-                        <h3>{{ news_item.title }}</h3>
-                        <p>{{ news_item.details }}</p>
+        <div class="container">
+            <div class="row">
+              {% for article in mars['news'] %}
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ article.title }}</h5>
+                      <p class="card-text">{{ article.details }}</p>
                     </div>
-                {% endfor %}
-            {% else %}
-                <p>No news available.</p>
-            {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
         </div>
 
         <!-- Display Featured Mars Image -->
