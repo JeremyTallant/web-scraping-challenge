@@ -1,11 +1,29 @@
 .jumbotron {
-    background-color: #d96c23; /* Or any other shade of red or orange that resembles the color of Mars */
-    color: white;
-    text-align: center; /* Center text within the jumbotron */
+    background-color: #dfe2e7; /* Lighter shade of gray */
+    color: #343a40; /* Text color */
+    text-align: center;
 }
 
-.jumbotron h1 {
-    font-size: 3rem; /* Responsive font size */
+body {
+    background-color: #e9ecef;
 }
 
+/* Add borders to table cells */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+/* Increase cell padding */
+th, td {
+    padding: 12px;
+}
+
+/* Use a different font color for headers */
+th {
+    color: #333333;
+}
