@@ -9,11 +9,6 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 mongo = PyMongo(app)
 
-# Function to clear data from MongoDB
-def clear_mongodb_data():
-    # Drop the collection to clear all data
-    mongo.db.collection.drop()
-
 # Route to render index.html template using data from Mongo
 @app.route("/")
 def index():
