@@ -30,3 +30,18 @@ This web application comprises several essential files that work together to scr
 * `styles.css`: Situated within the `static` folder, this Cascading Style Sheet (CSS) file is responsible for the styling of the web application. It defines the visual appearance of the HTML elements on the webpage, ensuring that the Mars data presentation is engaging and accessible.
 ## Implementation
 In the Implementation section of our Mars Exploration Web Application, we meticulously outline the step-by-step process and methodologies employed to bring this project from concept to reality, detailing the integration of data scraping, backend development, and frontend presentation.
+### Jupyter Notebook
+#### Selenium Web Scraping Setup
+```python
+# Dependencies
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from IPython.display import Image, display
+import pandas as pd
+from webdriver_manager.chrome import ChromeDriverManager
+from io import StringIO
+```
+This code initializes a Selenium WebDriver for Chrome using `ChromeDriverManager`, enabling automated web scraping and data handling with `pandas`, and supports image display in IPython environments. 
