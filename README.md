@@ -1,4 +1,5 @@
 # Mission to Mars: A Web-Scraping Journey
+![image](images/mars.png)
 ## Background
 This project presents a sophisticated web application designed to bring the forefront of Martian exploration directly to your screen. By harnessing the capabilities of Python, the application meticulously scrapes various scientific websites to gather the latest data on Mars missions. The back-end foundation is built with Flask, a micro web framework that efficiently routes and renders the collected data. At the same time, MongoDB is the backbone for data storage, ensuring the information is current and persistently available. The result is a user-friendly platform that educates and inspires by providing up-to-the-minute insights into our neighboring planet's exploration with the convenience of a single, intuitive interface. 
 ## Objective
@@ -27,4 +28,5 @@ This web application comprises several essential files that work together to scr
 * `app.py`: This is the Flask application's main file. It defines the server routes that handle requests from the web interface. The `/scrape` route triggers the `scrape()` function from `scrape_mars.py` and updates the database with fresh data. The root route `/` queries the database and populates the `index.html` template with the Mars data for display.
 * `index.html`: Located within the `templates` folder, this HTML file is the application's front end. It is designed to structure and display the scraped data in a user-friendly format. The template includes placeholders dynamically filled with data from the MongoDB database when the Flask app renders it.
 * `styles.css`: Situated within the `static` folder, this Cascading Style Sheet (CSS) file is responsible for the styling of the web application. It defines the visual appearance of the HTML elements on the webpage, ensuring that the Mars data presentation is engaging and accessible.
- 
+## Implementation
+In the Implementation section of our Mars Exploration Web Application, we meticulously outline the step-by-step process and methodologies employed to bring this project from concept to reality, detailing the integration of data scraping, backend development, and frontend presentation.
