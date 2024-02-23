@@ -9,5 +9,22 @@ Data scraping involves acquiring the latest news from the NASA Mars News Site, f
 Post data collection, the project transitions to its next phase, which involves displaying the scraped data via a web application developed with Flask and MongoDB. This segment includes the transformation of the Jupyter Notebook into a Python script, `scrape_mars.py`, which contains a `scrape` function. This function is then invoked through a `/scrape` route within the Flask application to update the Mars data in the MongoDB database. The root route `/` renders the aggregated data into an HTML template, `index.html`, designed to present the information in a user-friendly format.
 
 Dependencies like `ChromeDriverManager` ensure the automated scraping process is executed with an up-to-date browser driver, and `StringIO` is utilized for efficient in-memory string processing. This project aims to offer an educational and engaging experience for users interested in Mars exploration by showcasing the efficacy of web scraping techniques in gathering and presenting diverse web content.
-## Data
-## Implementation 
+## File Descriptions
+```text
+missions_to_mars/
+├── app.py                      
+├── scrape_mars.py              
+├── mission_to_mars.ipynb       
+├── templates/                  
+│   └── index.html              
+└── static/                     
+    └── css/                    
+        └── styles.css
+```
+This web application comprises several essential files that work together to scrape, process, and display Mars exploration data. Below is a breakdown of each file and its role within the project:
+* `mission_to_mars.ipynb`: This Jupyter Notebook is the starting point for our scraping process. It uses Python and libraries like Selenium to automate data collection from various sources. The notebook contains detailed comments explaining each step of the scraping procedure, making it easy for others to understand and modify the code if needed.
+* `scrape_mars.py`: Derived from the Jupyter Notebook, this Python script encapsulates the scraping logic into a `scrape()` function. When executed, it gathers the latest Mars exploration data and returns it as a Python dictionary, ready for storage in MongoDB.
+* `app.py`: This is the Flask application's main file. It defines the server routes that handle requests from the web interface. The `/scrape` route triggers the `scrape()` function from `scrape_mars.py` and updates the database with fresh data. The root route `/` queries the database and populates the `index.html` template with the Mars data for display.
+* `index.html`: Located within the `templates` folder, this HTML file is the application's front end. It is designed to structure and display the scraped data in a user-friendly format. The template includes placeholders dynamically filled with data from the MongoDB database when the Flask app renders it.
+* `styles.css`: Situated within the `static` folder, this Cascading Style Sheet (CSS) file is responsible for the styling of the web application. It defines the visual appearance of the HTML elements on the webpage, ensuring that the Mars data presentation is engaging and accessible.
+ 
