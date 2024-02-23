@@ -45,3 +45,39 @@ from webdriver_manager.chrome import ChromeDriverManager
 from io import StringIO
 ```
 This code initializes a Selenium WebDriver for Chrome using `ChromeDriverManager`, enabling automated web scraping and data handling with `pandas`, and supports image display in IPython environments. 
+#### Web Scraping and Image Display with Selenium
+```python
+# Function to initialize and return the WebDriver
+def initialize_webdriver():
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
+    return driver
+
+# Function to fetch and display an image from a given URL
+def fetch_and_display_image(url, css_selector="img.wide-image", base_url="https://astrogeology.usgs.gov"):
+    # Call initialize_webdriver() to get a WebDriver instance
+    driver = initialize_webdriver()
+    
+    try:
+        # Navigate to the website
+        driver.get(url)
+        
+        # Extract the image src
+        image_element = driver.find_element(By.CSS_SELECTOR, css_selector)
+        image_src = image_element.get_attribute('src')
+        
+        # Construct the absolute URL
+        image_url = base_url + image_src if image_src.startswith('/') else image_src
+        
+        # Close the driver
+        driver.quit()
+        
+        # Display the image in the notebook
+        display(Image(url=image_url))
+        
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        # Ensure the driver is closed even if an exception occurs
+        driver.quit()
+```
+This code includes two functions for web scraping using Selenium: `initialize_webdriver` initializes a Chrome WebDriver, and `fetch_and_display_image` fetches and displays an image from a specified URL using a CSS selector. 
