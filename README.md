@@ -105,3 +105,26 @@ for article in articles:
 driver.quit()
 ``` 
 This script uses Selenium to navigate to NASA's Mars news website, waits for the news articles to load, and then scrapes the titles and summaries of the latest articles, printing each to the console. It demonstrates explicit waits to ensure elements are visible before interaction and clean resource management by closing the WebDriver after execution.
+#### Displaying Mars Image of the Week
+```python
+# Call initialize_webdriver() to get a WebDriver instance
+driver = initialize_webdriver()
+
+# Navigate to the website
+url = "https://mars.nasa.gov/mars2020/multimedia/raw-images/image-of-the-week/"
+driver.get(url)
+
+# Wait for the main image to load
+wait = WebDriverWait(driver, 10)
+image_element = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.main_image img")))
+
+# Retrieve the image URL
+image_url = image_element.get_attribute('src')
+
+# Close the driver
+driver.quit()
+
+# Display the image in the notebook
+display(Image(url=image_url))
+```
+Here, we are retrieving and displaying the "Image of the Week" from the Mars 2020 mission using Selenium for web navigation and dynamic content loading. 
