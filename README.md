@@ -127,4 +127,29 @@ driver.quit()
 # Display the image in the notebook
 display(Image(url=image_url))
 ```
-Here, we are retrieving and displaying the "Image of the Week" from the Mars 2020 mission using Selenium for web navigation and dynamic content loading. 
+Here, we are retrieving and displaying the "Image of the Week" from the Mars 2020 mission using Selenium for web navigation and dynamic content loading.
+#### Extracting Mars Facts to DataFrame
+```python
+# Call initialize_webdriver() to get a WebDriver instance
+driver = initialize_webdriver()
+
+# Navigate to the website
+url = "https://mars.nasa.gov/all-about-mars/facts/"
+driver.get(url)
+
+# Extract the table HTML
+table_html = driver.find_element(By.CSS_SELECTOR, "table.mb_table").get_attribute('outerHTML')
+
+# Close the driver
+driver.quit()
+
+# Convert the HTML table to a pandas DataFrame
+df = pd.read_html(StringIO(table_html))[0]
+
+# Rename DataFrame columns for clarity
+df.columns = ['Metric', 'Earth', 'Mars']
+
+# Display df
+df
+```
+Then, we extracted a comparison table of Mars and Earth facts from NASA's website and converted it into a pandas DataFrame for analysis and display.   
