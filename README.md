@@ -153,7 +153,7 @@ df.columns = ['Metric', 'Earth', 'Mars']
 df
 ```
 Then, we extracted a comparison table of Mars and Earth facts from NASA's website and converted it into a pandas DataFrame for analysis and display.  
-#### Displaying Enhanced Mars Image for USGS
+#### Showcasing Cerebus Enhanced Mars Image
 ```python
 # URL of the website containing the image to fetch and display
 url = "https://astrogeology.usgs.gov/search/map/Mars/Viking/cerberus_enhanced"
@@ -161,4 +161,13 @@ url = "https://astrogeology.usgs.gov/search/map/Mars/Viking/cerberus_enhanced"
 # Call the function to fetch and display the image
 fetch_and_display_image(url)
 ```
-Next, we will fetch and display an enhanced image of Mars from the USGS website by leveraging a predefined function that automates web navigation and image extraction.  
+Next, we will fetch and display an enhanced image of Mars from the USGS website by leveraging a predefined function that automates web navigation and image extraction.
+#### Showingcasing Syrtis Major Enhanced Mars Image
+```python
+# URL of the website containing the image to fetch and display
+url = "https://astrogeology.usgs.gov/search/details/Mars/Viking/syrtis_major_enhanced/tif#:~:text=Mosaic%20of%20the%20Syrtis%20Major,in%20an%20point%20perspective%20projection."
+
+# Call the function to fetch and display the image
+fetch_and_display_image(url)
+```
+We will do the same here but change the url to fetch the Syrtis Major.   
