@@ -152,4 +152,13 @@ df.columns = ['Metric', 'Earth', 'Mars']
 # Display df
 df
 ```
-Then, we extracted a comparison table of Mars and Earth facts from NASA's website and converted it into a pandas DataFrame for analysis and display.   
+Then, we extracted a comparison table of Mars and Earth facts from NASA's website and converted it into a pandas DataFrame for analysis and display.  
+#### Displaying Enhanced Mars Image for USGS
+```python
+# URL of the website containing the image to fetch and display
+url = "https://astrogeology.usgs.gov/search/map/Mars/Viking/cerberus_enhanced"
+
+# Call the function to fetch and display the image
+fetch_and_display_image(url)
+```
+Next, we will fetch and display an enhanced image of Mars from the USGS website by leveraging a predefined function that automates web navigation and image extraction.  
