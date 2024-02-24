@@ -80,4 +80,28 @@ def fetch_and_display_image(url, css_selector="img.wide-image", base_url="https:
         # Ensure the driver is closed even if an exception occurs
         driver.quit()
 ```
-This code includes two functions for web scraping using Selenium: `initialize_webdriver` initializes a Chrome WebDriver, and `fetch_and_display_image` fetches and displays an image from a specified URL using a CSS selector. 
+This code includes two functions for web scraping using Selenium: `initialize_webdriver` initializes a Chrome WebDriver, and `fetch_and_display_image` fetches and displays an image from a specified URL using a CSS selector.
+#### Extracting Latest Mars News with Selenium
+```python
+# Call initialize_webdriver() to get a WebDriver instance
+driver = initialize_webdriver()
+
+# Navigate to the website
+url = "https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest"
+driver.get(url)
+
+# Wait for the page to load and titles to appear
+wait = WebDriverWait(driver, 10)
+wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "ul.item_list li.slide")))
+
+# Retrieve titles and details
+articles = driver.find_elements(By.CSS_SELECTOR, "ul.item_list li.slide")
+for article in articles:
+    title = article.find_element(By.CSS_SELECTOR, "div.content_title").text
+    details = article.find_element(By.CSS_SELECTOR, "div.article_teaser_body").text
+    print(f"Title: {title}\nDetails: {details}\n")
+
+# Close the driver
+driver.quit()
+``` 
+This script uses Selenium to navigate to NASA's Mars news website, waits for the news articles to load, and then scrapes the titles and summaries of the latest articles, printing each to the console. It demonstrates explicit waits to ensure elements are visible before interaction and clean resource management by closing the WebDriver after execution.
