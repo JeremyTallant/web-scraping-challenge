@@ -205,4 +205,10 @@ from io import StringIO
 First, we import all necessary libraries for web automation and data manipulation. 
 #### Function to Initialize the WebDriver
 ```python
-
+# Function to initialize and return the WebDriver
+def initialize_webdriver():
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service)
+    return driver
+```
+Next, we create a function that sets up and returns a Selenium WebDriver for Chrome, automating browser setup by downloading the latest ChromeDriver version using `ChromeDriverManager`, ensuring our web scraping is always up-to-date and ready for action. 
