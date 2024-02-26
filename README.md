@@ -170,4 +170,13 @@ url = "https://astrogeology.usgs.gov/search/details/Mars/Viking/syrtis_major_enh
 # Call the function to fetch and display the image
 fetch_and_display_image(url)
 ```
-We will do the same here but change the url to fetch the Syrtis Major.   
+We will do the same here but change the url to fetch the Syrtis Major. 
+#### Displaying Schiaparelli Enhanced Mars Image
+```python
+# URL of the website containing the image to fetch and display
+url = "https://astrogeology.usgs.gov/search/map/Mars/Viking/schiaparelli_enhanced"
+
+# Call the function to fetch and display the image
+fetch_and_display_image(url)
+```
+Apply the same function to retrieve the Schiaparelli image.   
