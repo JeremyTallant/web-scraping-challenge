@@ -188,4 +188,21 @@ url = "https://astrogeology.usgs.gov/search/map/Mars/Viking/valles_marineris_enh
 # Call the function to fetch and display the image
 fetch_and_display_image(url)
 ```
-Lastly, retrieve the Valles Marineris image.   
+Lastly, retrieve the Valles Marineris image.
+### Scrape Mars
+#### Dependencies
+```python
+# scrape_mars.py
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import pandas as pd
+from webdriver_manager.chrome import ChromeDriverManager
+from io import StringIO
+```
+First, we import all necessary libraries for web automation and data manipulation. 
+#### Function to Initialize the WebDriver
+```python
+
