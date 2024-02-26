@@ -211,4 +211,22 @@ def initialize_webdriver():
     driver = webdriver.Chrome(service=service)
     return driver
 ```
-Next, we create a function that sets up and returns a Selenium WebDriver for Chrome, automating browser setup by downloading the latest ChromeDriver version using `ChromeDriverManager`, ensuring our web scraping is always up-to-date and ready for action. 
+Next, we create a function that sets up and returns a Selenium WebDriver for Chrome. We automate browser setup by downloading the latest ChromeDriver version using `ChromeDriverManager`, ensuring our web scraping is always up-to-date and ready for action. 
+#### Function to Fetch and Process an Image URL
+```python
+# Function to fetch and display an image from a given URL
+def fetch_image_url(url, css_selector="img.wide-image", base_url="https://astrogeology.usgs.gov"):
+    driver = initialize_webdriver()
+    try:
+        driver.get(url)
+        image_element = driver.find_element(By.CSS_SELECTOR, css_selector)
+        image_src = image_element.get_attribute('src')
+        image_url = base_url + image_src if image_src.startswith('/') else image_src
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        image_url = None
+    finally:
+        driver.quit()
+    return image_url
+``` 
+Then, we set up a function that navigates to a specified URL using a Selenium WebDriver, searches for an image element using a CSS selector, and constructs the image's full URL by conditionally appending a base URL. It handles errors and ensures the WebDriver is adequately closed after operation, returning the final image URL for use. 
