@@ -287,7 +287,10 @@ def scrape():
     return scraped_data
 ```
 This `scrape` function orchestrates a comprehensive data collection process involving multiple web scraping tasks to aggregate a variety of Mars-related information. It initializes a WebDriver multiple times to navigate through different sections of the NASA Mars website and other sources, collecting latest news, a featured image, facts about Mars, and hemisphere images. Each section is wrapped in try-finally blocks to ensure resources are released properly. The function meticulously gathers and organizes data into a dictionary, `scraped_data`, which includes news articles, the featured Mars image URL, a table of Mars facts converted to a dictionary, and a list of Mars hemisphere images. This organized approach ensures a rich compilation of Mars data, ready for further analysis or display.
-
-
-
-
+#### Executing the Mars Scraping Script
+```python
+if __name__ == "__main__":
+    result = scrape()
+    print(result)
+```
+This conditional block checks if the script is being run as the main program and not being imported as a module in another script. If it is the main program, it calls the scrape function to collect Mars-related data across different categories, including news, images, and facts. Upon completion, it prints the aggregated results to the console. This setup is ideal for testing or directly running the script to perform the scraping tasks and immediately see the output, showcasing the versatility and direct application of the scraping functions developed.
