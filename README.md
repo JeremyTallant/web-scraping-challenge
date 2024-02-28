@@ -295,3 +295,39 @@ if __name__ == "__main__":
     print(result)
 ```
 This conditional block checks if the script is being run as the main program and not being imported as a module in another script. If it is the main program, it calls the scrape function to collect Mars-related data across different categories, including news, images, and facts. Upon completion, it prints the aggregated results to the console. This setup is ideal for testing or directly running the script to perform the scraping tasks and immediately see the output, showcasing the versatility and direct application of the scraping functions developed.
+### Flask App
+For the last step we will setup our Flask App. 
+```python
+from flask import Flask, render_template, redirect
+from flask_pymongo import PyMongo
+import scrape_mars
+
+# Create an instance of Flask
+app = Flask(__name__)
+
+# Use PyMongo to establish Mongo connection
+app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
+mongo = PyMongo(app)
+
+# Route to render index.html template using data from Mongo
+@app.route("/")
+def index():
+    mars_data = mongo.db.collection.find_one()
+    return render_template("index.html", mars=mars_data)
+
+# Route that will trigger the scrape function
+@app.route("/scrape")
+def scrape():
+    # Run the scrape function
+    mars_data = scrape_mars.scrape()
+
+    # Update the Mongo database using update_one and upsert=True
+    mongo.db.collection.update_one({}, {'$set': mars_data}, upsert=True)
+
+    # Redirect back to home page
+    return redirect("/", code=302)
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+This script defines a Flask web application that serves Mars-related data, collected by the `scrape_mars.py` script, through a simple web interface. It establishes a connection to a MongoDB database to store and retrieve the scraped data. With two routes defined, one displays the data on an `i`ndex.html` page, and the other triggers the scraping process to update the database with fresh data, ensuring users always have access to the latest information about Mars directly from their web browser.
