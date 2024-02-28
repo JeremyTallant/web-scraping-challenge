@@ -190,6 +190,7 @@ fetch_and_display_image(url)
 ```
 Lastly, retrieve the Valles Marineris image.
 ### Scrape Mars
+Now we are going to convert our Jupyter notebook into a Python script called `scrape_mars`.py by using a function called `scrape`. 
 #### Dependencies
 ```python
 # scrape_mars.py
