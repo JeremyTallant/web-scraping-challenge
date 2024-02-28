@@ -190,7 +190,7 @@ fetch_and_display_image(url)
 ```
 Lastly, retrieve the Valles Marineris image.
 ### Scrape Mars
-Now we are going to convert our Jupyter notebook into a Python script called `scrape_mars`.py by using a function called `scrape`. 
+Now we are going to convert our Jupyter notebook into a Python script called `scrape_mars.py` by using a function called `scrape`. 
 #### Dependencies
 ```python
 # scrape_mars.py
@@ -330,4 +330,4 @@ def scrape():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-This script defines a Flask web application that serves Mars-related data, collected by the `scrape_mars.py` script, through a simple web interface. It establishes a connection to a MongoDB database to store and retrieve the scraped data. With two routes defined, one displays the data on an `i`ndex.html` page, and the other triggers the scraping process to update the database with fresh data, ensuring users always have access to the latest information about Mars directly from their web browser.
+This script defines a Flask web application that serves Mars-related data, collected by the `scrape_mars.py` script, through a simple web interface. It establishes a connection to a MongoDB database to store and retrieve the scraped data. With two routes defined, one displays the data on an `index.html` page, and the other triggers the scraping process to update the database with fresh data, ensuring users always have access to the latest information about Mars directly from their web browser.
