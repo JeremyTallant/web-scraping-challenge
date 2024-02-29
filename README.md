@@ -363,4 +363,8 @@ The Mars Exploration Web Application successfully aggregates and displays up-to-
 
 * **Mars Facts**: A dynamically generated table presents fascinating facts about Mars, such as its diameter, mass, and orbital information. This section translates complex planetary data into an accessible format, enriching users' understanding of Mars with factual precision.
 
-![image](images/table.png) 
+![image](images/table.png)
+
+* **Mars Hemispheres**: High-resolution images of Mars' hemispheres are displayed, each accompanied by titles. This section allows users to explore the diverse landscapes of Mars, from its vast valleys to its towering volcanoes, highlighting the planet's geological complexity. 
+
+![image](images/hemispheres.png)
