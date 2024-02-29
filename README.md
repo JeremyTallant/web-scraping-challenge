@@ -357,6 +357,10 @@ The Mars Exploration Web Application successfully aggregates and displays up-to-
  
 ![image](images/mars_news.png)
 
-* **Featured Mars Image**: The application features a stunning, high-resolution image of Mars sourced from JPL's Space Image archives. These captivating visuals bring the Martian surface closer to Earth, offering users a glimpse into the planet's mysterious beauty. 
+* **Featured Mars Image**: The application features a stunning, high-resolution image of Mars sourced from JPL's Space Image archives. This captivating visual brings the Martian surface closer to Earth, offering users a glimpse into the planet's mysterious beauty. 
 
 ![image](images/featured_image.png)
+
+* **Mars Facts**: A dynamically generated table presents fascinating facts about Mars, such as its diameter, mass, and orbital information. This section translates complex planetary data into an accessible format, enriching users' understanding of Mars with factual precision.
+
+![image](images/table.png) 
