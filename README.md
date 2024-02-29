@@ -353,5 +353,10 @@ To make the most of the Mars Exploration Web Application, follow these steps to 
 	* The application will scrape new data from the designated websites, update the database, and refresh the page to display the latest information. 
 ## Results
 The Mars Exploration Web Application successfully aggregates and displays up-to-date information on Mars exploration in a user-friendly web interface. The application showcases the following key results:
-* **Latest Mars News**: Users are greeted with the most recent news articles from NASA's Mars exploration missions, including titles and summaries, providing insightful updates on ongoing and future missions to the Red Planet. 
+* **Latest Mars News**: Users are greeted with the most recent news articles from NASA's Mars exploration missions, including titles and summaries, providing insightful updates on ongoing and future missions to the Red Planet.
+ 
 ![image](images/mars_news.png)
+
+* **Featured Mars Image**: The application features a stunning, high-resolution image of Mars sourced from JPL's Space Image archives. These captivating visuals bring the Martian surface closer to Earth, offering users a glimpse into the planet's mysterious beauty. 
+
+![image](images/featured_image.png)
