@@ -13,6 +13,7 @@ Dependencies like `ChromeDriverManager` ensure the automated scraping process is
 ## File Descriptions
 ```text
 missions_to_mars/
+├── requirements.txt
 ├── app.py                      
 ├── scrape_mars.py              
 ├── mission_to_mars.ipynb       
@@ -23,6 +24,7 @@ missions_to_mars/
         └── styles.css
 ```
 This web application comprises several essential files that work together to scrape, process, and display Mars exploration data. Below is a breakdown of each file and its role within the project:
+* `requirements.txt`: This file lists all the Python packages and their specific versions required to run the Mars Exploration Web Application.
 * `mission_to_mars.ipynb`: This Jupyter Notebook is the starting point for our scraping process. It uses Python and libraries like Selenium to automate data collection from various sources. The notebook contains detailed comments explaining each step of the scraping procedure, making it easy for others to understand and modify the code if needed.
 * `scrape_mars.py`: Derived from the Jupyter Notebook, this Python script encapsulates the scraping logic into a `scrape()` function. When executed, it gathers the latest Mars exploration data and returns it as a Python dictionary, ready for storage in MongoDB.
 * `app.py`: This is the Flask application's main file. It defines the server routes that handle requests from the web interface. The `/scrape` route triggers the `scrape()` function from `scrape_mars.py` and updates the database with fresh data. The root route `/` queries the database and populates the `index.html` template with the Mars data for display.
