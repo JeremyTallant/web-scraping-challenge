@@ -351,3 +351,7 @@ To make the most of the Mars Exploration Web Application, follow these steps to 
 4. **Initiating Scraping**:
 	* To get the latest Mars exploration data, click the `Scrape New Data` button on the web page. This will trigger the scraping process by executing the `scrape` function within `scrape_mars.py`.
 	* The application will scrape new data from the designated websites, update the database, and refresh the page to display the latest information. 
+## Results
+The Mars Exploration Web Application successfully aggregates and displays up-to-date information on Mars exploration in a user-friendly web interface. The application showcases the following key results:
+* **Latest Mars News**: Users are greeted with the most recent news articles from NASA's Mars exploration missions, including titles and summaries, providing insightful updates on ongoing and future missions to the Red Planet. 
+![image](images/mars_news.png)
