@@ -3,11 +3,11 @@
 ## Background
 This project presents a sophisticated web application designed to bring the forefront of Martian exploration directly to your screen. By harnessing the capabilities of Python, the application meticulously scrapes various scientific websites to gather the latest data on Mars missions. The back-end foundation is built with Flask, a micro web framework that efficiently routes and renders the collected data. At the same time, MongoDB is the backbone for data storage, ensuring the information is current and persistently available. The result is a user-friendly platform that educates and inspires by providing up-to-the-minute insights into our neighboring planet's exploration with the convenience of a single, intuitive interface.
 ## Table of Contents
-- Objective(#objective)
-- File Descriptions(#file-descriptions)
-- Implementation(#implementation)
-- Usage(#usage)
-- Results(#results)
+- [Objective](#objective)
+- [File Descriptions](#file-descriptions)
+- [Implementation](#implementation)
+- [Usage](#usage)
+- [Results](#results)
 ## Objective
 This project aims to create an advanced web application that consolidates and displays the latest data from Mars exploration missions. Leveraging a suite of Python libraries encapsulated in a Jupyter Notebook titled `mission_to_mars.ipynb`; the application initiates the data acquisition process. This operation is conducted with the help of `Selenium`, which enables programmatic navigation of web pages to scrape content effectively. Using the `webdriver` and accompanying modules from `Selenium` facilitates the automation of browser interactions, including retrieving up-to-date news, full-size images, and detailed Mars facts.
 
