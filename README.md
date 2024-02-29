@@ -289,16 +289,16 @@ def scrape():
 
     return scraped_data
 ```
-This `scrape` function orchestrates a comprehensive data collection process involving multiple web scraping tasks to aggregate a variety of Mars-related information. It initializes a WebDriver multiple times to navigate through different sections of the NASA Mars website and other sources, collecting latest news, a featured image, facts about Mars, and hemisphere images. Each section is wrapped in try-finally blocks to ensure resources are released properly. The function meticulously gathers and organizes data into a dictionary, `scraped_data`, which includes news articles, the featured Mars image URL, a table of Mars facts converted to a dictionary, and a list of Mars hemisphere images. This organized approach ensures a rich compilation of Mars data, ready for further analysis or display.
+This `scrape` function orchestrates a comprehensive data collection process involving multiple web scraping tasks to aggregate various Mars-related information. It initializes a WebDriver various times to navigate through different sections of the NASA Mars website and other sources, collecting the latest news, a featured image, facts about Mars, and hemisphere images. Each section is wrapped in try-finally blocks to ensure resources are correctly released. The function meticulously gathers and organizes data into a dictionary, `scraped_data,` which includes news articles, the featured Mars image URL, a table of Mars facts converted to a dictionary, and a list of Mars hemisphere images. This organized approach ensures a rich compilation of Mars data, ready for further analysis or display.
 #### Executing the Mars Scraping Script
 ```python
 if __name__ == "__main__":
     result = scrape()
     print(result)
 ```
-This conditional block checks if the script is being run as the main program and not being imported as a module in another script. If it is the main program, it calls the scrape function to collect Mars-related data across different categories, including news, images, and facts. Upon completion, it prints the aggregated results to the console. This setup is ideal for testing or directly running the script to perform the scraping tasks and immediately see the output, showcasing the versatility and direct application of the scraping functions developed.
+This conditional block checks if the script runs as the main program and is not imported as a module in another script. If it is the main program, it calls the scrape function to collect Mars-related data across different categories, including news, images, and facts. Upon completion, it prints the aggregated results to the console. This setup is ideal for testing or directly running the script to perform the scraping tasks and immediately seeing the output, showcasing the versatility and direct application of the scraping functions developed.
 ### Flask App
-For the last step we will setup our Flask App. 
+For the last step, we will set up our Flask App. 
 ```python
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
@@ -307,7 +307,7 @@ import scrape_mars
 # Create an instance of Flask
 app = Flask(__name__)
 
-# Use PyMongo to establish Mongo connection
+# Use PyMongo to establish a Mongo connection
 app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
 mongo = PyMongo(app)
 
@@ -332,4 +332,11 @@ def scrape():
 if __name__ == "__main__":
     app.run(debug=True)
 ```
-This script defines a Flask web application that serves Mars-related data, collected by the `scrape_mars.py` script, through a simple web interface. It establishes a connection to a MongoDB database to store and retrieve the scraped data. With two routes defined, one displays the data on an `index.html` page, and the other triggers the scraping process to update the database with fresh data, ensuring users always have access to the latest information about Mars directly from their web browser.
+This script defines a Flask web application that serves Mars-related data collected by the `scrape_mars.py` script through a simple web interface. It connects to a MongoDB database to store and retrieve the scraped data. With two routes defined, one displays the data on an `index.html` page, and the other triggers the scraping process to update the database with fresh data, ensuring users always have access to the latest information about Mars directly from their web browser.
+## Usage 
+To make the most of the Mars Exploration Web Application, follow these steps to set up and run the app on your local machine: 
+1. **Environment Setup:
+	* Install necessary Python libraries by running:
+	```python
+	pip install -r requirements.txt
+	``` 
