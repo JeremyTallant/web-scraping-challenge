@@ -335,8 +335,18 @@ if __name__ == "__main__":
 This script defines a Flask web application that serves Mars-related data collected by the `scrape_mars.py` script through a simple web interface. It connects to a MongoDB database to store and retrieve the scraped data. With two routes defined, one displays the data on an `index.html` page, and the other triggers the scraping process to update the database with fresh data, ensuring users always have access to the latest information about Mars directly from their web browser.
 ## Usage 
 To make the most of the Mars Exploration Web Application, follow these steps to set up and run the app on your local machine: 
-1. **Environment Setup:
-	* Install necessary Python libraries by running:
+1. **Environment Setup**:
+	* Install necessary Python libraries by navigating to the `missions_to_mars` folder and running the following line in your command line:
+
 	```python
 	pip install -r requirements.txt
 	``` 
+2. **Running the Web Application**:
+	* Navigate to the `mission_to_mars` folder in your command line and execute:
+ 
+	```python
+	python app.py
+	```
+3. **Accessing the Application**:
+	* Once the Flask server is running, open a web browser and go to `http://localhost:5000/`. 
+	* The home page of the Mars Exploration Web Application will be displayed, showing a blank template ready to scrape the latest Mars data. 
