@@ -337,16 +337,17 @@ This script defines a Flask web application that serves Mars-related data collec
 To make the most of the Mars Exploration Web Application, follow these steps to set up and run the app on your local machine: 
 1. **Environment Setup**:
 	* Install necessary Python libraries by navigating to the `missions_to_mars` folder and running the following line in your command line:
-
 	```python
 	pip install -r requirements.txt
 	``` 
 2. **Running the Web Application**:
 	* Navigate to the `mission_to_mars` folder in your command line and execute:
- 
 	```python
 	python app.py
 	```
 3. **Accessing the Application**:
 	* Once the Flask server is running, open a web browser and go to `http://localhost:5000/`. 
 	* The home page of the Mars Exploration Web Application will be displayed, showing a blank template ready to scrape the latest Mars data. 
+4. **Initiating Scraping**:
+	* To get the latest Mars exploration data, click the `Scrape New Data` button on the web page. This will trigger the scraping process by executing the `scrape` function within `scrape_mars.py`.
+	* The application will scrape new data from the designated websites, update the database, and refresh the page to display the latest information. 
